@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MindMetric AI</title>
+
+    <meta
+        name="description"
+        content="MindMetric AI - AI Personality Intelligence"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+
+            <span class="logo-icon">
+                🧠
+            </span>
+
+            <span>
+                MindMetric
+                <span class="logo-ai">AI</span>
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#features">
+                Features
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a
+                href="#assessment"
+                class="nav-button"
+            >
+                Start Assessment
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section
+            id="home"
+            class="hero"
+        >
+
+            <div class="container">
+
+                <div class="badge">
+                    ✦ AI PERSONALITY INTELLIGENCE
+                </div>
+
+
+                <h1>
+
+                    Discover the
+                    <span class="gradient-text">
+                        patterns
+                    </span>
+                    behind your personality.
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    MindMetric AI analyzes your responses
+                    to create a personalized personality
+                    profile using five key personality dimensions.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <button
+                        class="primary-button"
+                        id="startAssessment"
+                    >
+                        ✨ Start Assessment
+                    </button>
+
+
+                    <button
+                        class="secondary-button"
+                        onclick="document.getElementById('features').scrollIntoView()"
+                    >
+                        Learn More
+                    </button>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="stats">
+
+                    <div class="stat-card">
+
+                        <div class="stat-number">
+                            15
+                        </div>
+
+                        <div class="stat-label">
+                            Questions
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-number">
+                            5
+                        </div>
+
+                        <div class="stat-label">
+                            Personality Dimensions
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-number">
+                            AI
+                        </div>
+
+                        <div class="stat-label">
+                            Powered Insights
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section
+            id="features"
+            class="section"
+        >
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        WHY MINDMETRIC
+                    </div>
+
+                    <h2 class="section-title">
+                        Understand yourself better.
+                    </h2>
+
+                    <p class="section-description">
+
+                        A simple personality assessment
+                        transformed into a professional
+                        personality intelligence experience.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="features">
+
+
+                    <!-- FEATURE 1 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🧠
+                        </div>
+
+                        <div class="feature-title">
+                            Personality Analysis
+                        </div>
+
+                        <div class="feature-description">
+
+                            Analyze your responses across
+                            five major personality dimensions
+                            to create your unique profile.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FEATURE 2 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📊
+                        </div>
+
+                        <div class="feature-title">
+                            Visual Dashboard
+                        </div>
+
+                        <div class="feature-description">
+
+                            Explore your personality through
+                            beautiful scores, charts and
+                            personalized insights.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FEATURE 3 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            ✨
+                        </div>
+
+                        <div class="feature-title">
+                            Personalized Insights
+                        </div>
+
+                        <div class="feature-description">
+
+                            Discover your strongest traits
+                            and understand what your results
+                            may say about your personality.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ASSESSMENT ================= -->
+
+        <section
+            id="assessment"
+            class="assessment-section"
+        >
+
+            <div class="container">
+
+                <div class="assessment-header">
+
+                    <div class="section-label">
+                        MINDMETRIC ASSESSMENT
+                    </div>
+
+                    <h2>
+                        Personality Assessment
+                    </h2>
+
+                    <p>
+                        Answer all 15 questions honestly.
+                    </p>
+
+                </div>
+
+
+                <!-- Questions will be inserted by JavaScript -->
+
+                <div id="questionsContainer"></div>
+
+
+                <div class="hero-actions">
+
+                    <button
+                        class="primary-button"
+                        id="submitAssessment"
+                    >
+                        ✨ Generate My Profile
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section
+            id="dashboard"
+            class="dashboard"
+        >
+
+            <div class="container">
+
+                <div class="dashboard-header">
+
+                    <div class="section-label">
+                        PERSONALITY ANALYSIS COMPLETE
+                    </div>
+
+                    <div class="dashboard-title">
+                        Your Personality Dashboard
+                    </div>
+
+                    <div class="dashboard-subtitle">
+                        Your personalized MindMetric AI profile.
+                    </div>
+
+                </div>
+
+
+                <!-- SCORE CARDS -->
+
+                <div
+                    class="score-grid"
+                    id="scoreGrid"
+                >
+
+                    <!-- JavaScript will generate cards -->
+
+                </div>
+
+
+
+                <!-- RADAR + DOMINANT TRAIT -->
+
+                <div class="dashboard-grid">
+
+
+                   <div class="dashboard-card">
+
+    <div class="dashboard-card-title">
+        Your Personality Map
+    </div>
+
+    <div style="position: relative; height: 400px; width: 100%;">
+        <canvas id="radarChart"></canvas>
+    </div>
+
+</div>
+
+
+
+                    <div
+                        class="dominant-card"
+                        id="dominantCard"
+                    >
+
+                        <!-- JavaScript inserts result -->
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- INSIGHTS -->
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        PERSONALITY INSIGHTS
+                    </div>
+
+                    <h2 class="section-title">
+                        What your profile tells you
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="insight-grid"
+                    id="insightGrid"
+                >
+
+                    <!-- JavaScript inserts insights -->
+
+                </div>
+
+
+                <div class="hero-actions">
+
+                    <button
+                        class="secondary-button"
+                        id="retakeAssessment"
+                    >
+                        ↻ Retake Assessment
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                🧠 MindMetric AI
+            </p>
+
+            <p>
+                AI Personality Intelligence Prototype
+            </p>
+
+            <p>
+                Designed for educational and
+                self-reflection purposes.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js"
+    ></script>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>
